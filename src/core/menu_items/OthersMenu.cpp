@@ -6,6 +6,7 @@
 #include "modules/bjs_interpreter/interpreter.h"
 #include "modules/others/clicker.h"
 #include "modules/others/ibutton.h"
+#include "modules/others/lab_apps.h"
 #include "modules/others/mic.h"
 #include "modules/others/qrcode_menu.h"
 #include "modules/others/tururururu.h"
@@ -15,6 +16,9 @@ void OthersMenu::optionsMenu() {
     options = {
         {"QRCodes",      qrcode_menu                  },
         {"Megalodon",    shark_setup                  },
+        {"Hardware Test", hardware_test_app            },
+        {"Wi-Fi Scanner", wifi_scanner_passive_app     },
+        {"Stalker Demo",  stalker_demo_app             },
 
 #if defined(MIC_SPM1423) || defined(MIC_INMP441)
         {"Microphone",   [this]() { micMenu(); }      }, //@deveclipse
